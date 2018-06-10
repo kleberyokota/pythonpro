@@ -13,7 +13,7 @@ def avatar_url(mocker):
         'login': 'kleberyokota', 'id': 39857180,
         'avatar_url': url
     }
-    get_mocker = mocker.patch('libpythonpro.github_api.request.get')
+    get_mocker = mocker.patch('libpythonpro.github_api.requests.get')
     get_mocker.return_value = resp_mock
     github_api.requests.get = Mock(return_value=resp_mock)
     return url
@@ -24,6 +24,6 @@ def test_buscar_avatar(avatar_url):
     assert avatar_url == url
 
 
-def test_buscar_avatar():
+def test_buscar_avatar_integracao():
     url = github_api.buscar_avatar('kleber')
     assert 'https://avatars2.githubusercontent.com/u/109299?v=4' == url
