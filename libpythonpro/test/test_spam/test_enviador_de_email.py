@@ -13,7 +13,7 @@ def teste_remetente(destinatario):
     enviador = Enviador()
     resultado = enviador.enviar(
         destinatario,
-        'yokota.nobuyuki@gmail.com',
+        'kleber_yokota@gmail.com',
         'Cursos Python Pro',
         'Primeira turma Guido Vom Rossum'
     )
@@ -27,7 +27,7 @@ def teste_remetente_invalido(destinatario):
     with pytest.raises(EmailInvalido):
         enviador.enviar(
             destinatario,
-            'yokota.nobuyuki@gmail.com',
+            'kleber_yokota@gmail.com',
             'Cursos Python Pro',
             'Primeira turma Guido Vom Rossum'
         )
