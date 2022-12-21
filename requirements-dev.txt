@@ -1,5 +1,5 @@
 atomicwrites==1.1.5
-attrs==18.1.0
+attrs==22.2.0
 coverage==4.5.1
 flake8==3.5.0
 mccabe==0.6.1
